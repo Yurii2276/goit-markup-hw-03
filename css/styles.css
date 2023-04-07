@@ -9,6 +9,7 @@ html {
 
 
 :root {
+  /* colors */
   --primary-text-color: #ffffff;
   --title-text-color: #2e2f42;
   --accent-color: #4d5ae5;
@@ -17,6 +18,10 @@ html {
   --btn-hover-color: #404bbf;
   --btn-secondary-color: #e7e9fc;
   --second-white-text: #f4f4fd;
+
+/* indent for gap */
+--indent: 24px;
+--indent-items: 3;
 }
 
 body {
@@ -25,6 +30,48 @@ body {
 
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+}
+
+/* reset start */
+h1, h2, h3, h4, h5, h6, p, ul{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+max-width: 100%;
+height: auto;
+}
+
+.link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+/* reset end */
+
+.container{
+  width: 1158px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+/* outline: dashed 1px teal; */
+
+}
+
+.section {
+padding-top: 120px;
+padding-bottom: 120px;
+/* outline: dashed 2px red; */
+}
+
+.centred{
+  text-align: center;
 }
 
 /*to hide service*/
@@ -40,9 +87,23 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+ /* card set */
+ .card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+ }
 
+.card-set-items {
+  width: calc( (100% - (var(--indent-items) - 1)*var(--indent)) / var(--indent-items) );
+}
 
-/* button */
+/**
+  |============================
+  | BUTTON
+  |============================
+*/
+  
 
 .button-herro {
   color: var(--primari-whitecolor);
@@ -85,10 +146,28 @@ body {
   list-style: none;
 }
 
-/* heder */
+/**
+  |============================
+  | HEDER
+  |============================
+*/
+
+
+.heder-container{
+  border-bottom: solid 1px var(--btn-secondary-color);
+}
+
+.heder-container .container{
+  display: flex;
+  
+} 
 
 /* Logo */
 .logo {
+margin-right: 76px;
+padding-top: 24px;
+padding-bottom: 24px;
+
   color: var(--accent-color);
 
   font-family: Raleway, sans-serif;
@@ -109,7 +188,17 @@ body {
 }
 
 /* site nav */
+.nav{
+display: flex;
+gap: 40px;
+
+}
+
 .nav .link {
+display: block;
+padding-top: 24px;
+padding-bottom: 24px;
+
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -135,12 +224,25 @@ body {
 
 /* adress */
 .adress {
+margin-left: auto;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   
 }
+
+.nav-adress {
+display: flex;
+gap: 40px;
+}
+.nav-adress .link {
+  display: block;
+padding-top: 24px;
+padding-bottom: 24px;
+}
+
 .adress .link {
   color: var(--base-text-color);
   
@@ -155,9 +257,25 @@ body {
   color: var(--btn-hover-color);
 }
 
-/* herro */
-.herro {
-  background-color: var(--title-text-color);
+
+/**
+  |============================
+  | HERRO
+  |============================
+*/
+
+.herro { 
+   background-color: var(--title-text-color);
+   padding-top: 188px;
+   padding-bottom: 188px;
+ } 
+
+.herro .container{
+display: flex;
+flex-direction: column;
+gap: 48px;
+justify-content: space-between;
+align-items: center;
 }
 
 .herro-title {
@@ -169,6 +287,19 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
 }
+
+.herro-title-container {
+display: block;
+  width: 496px;
+}
+
+.btn-herro-container{
+  display: block;
+  min-width: 169px;
+padding: 16px 32px;
+ border-radius: 4px;
+}
+
 .section .section-title {
   color: var(--title-text-color);
 
@@ -181,7 +312,13 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Principles of work */
+
+/**
+  |============================
+  | Principles of work
+  |============================
+*/
+
 .section .section-subtitle {
   color: var(--title-text-color);
 
@@ -189,8 +326,21 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+
+  margin-bottom: 8px;
 }
 
+.cont-prinsp-work{
+padding-bottom: 0;
+
+--indent-items: 4;
+}
+
+/* .cont-prinsp-work .list {
+  display: flex;
+  gap: var(--indent-princp-work);
+
+} */
 
 .section .desc {
   color: var(--base-text-color);
@@ -198,7 +348,14 @@ body {
   letter-spacing: 0.02em;
 
 }
-/* our-projects */
+
+
+/**
+  |============================
+  | OUR PROJECTS
+  |============================
+*/
+
 .our-projects .section-title{
   color: var(--title-text-color);
 
@@ -215,8 +372,19 @@ body {
  
 }
 
-/* Our team */
+.our-projects .section-title{
+  margin-bottom: 72px;
+}
+
+/**
+  |============================
+  | OUR TEAM
+  |============================
+*/
+
 .team {
+  --indent-items: 4;
+
   background-color: var(--second-white-text);
 }
 .section-tm-title {
@@ -228,11 +396,12 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  
+
+  margin-bottom: 72px;
 }
 
 .style-img {
-  background-color: var(--primari-whitecolor);
+background-color: var(--primari-whitecolor);
 }
 
 .section .name {
@@ -241,7 +410,9 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em
+  letter-spacing: 0.02em;
+
+  margin-bottom: 8px;
 }
 .section .profession {
   color: var(--base-text-color);
@@ -249,19 +420,47 @@ body {
   line-height: 24px;
   letter-spacing: 0.02em;
 }
-/* foter */
-.footer {
-  background-color: var(--title-text-color);
-}
+ 
+ .team-wrapper {
+padding: 32px 16px;
+text-align: center;
+
+ }
+
+/**
+  |============================
+  | FOOTER
+  |============================
+*/
+
 
 .footer .text {
   color: var(--second-white-text);
 }
 
-/* portfolio  */
+.cont-footer{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--title-text-color);
+}
+
+.footer .text{ 
+  margin-top: 16px; 
+  width: 264px;
+} 
+
+
+/**
+  |============================
+  | PORTFOLIO
+  |============================
+*/
+
 .link{
   text-decoration: none;
 }
+
+
 
 .desc-product {
   color: var(--title-text-color);
