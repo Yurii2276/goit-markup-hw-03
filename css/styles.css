@@ -113,11 +113,12 @@ padding-bottom: 120px;
 
 .heder-container{
   border-bottom: solid 1px var(--btn-secondary-color);
+
 }
 
 .heder-container .container{
   display: flex;
-  
+  align-items: center; 
 } 
 
 /* Logo */
@@ -149,6 +150,7 @@ padding-bottom: 24px;
 .nav{
 display: flex;
 gap: 40px;
+align-items: center;
 
 }
 
