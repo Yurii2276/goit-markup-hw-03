@@ -309,8 +309,9 @@ padding: 16px 32px;
   margin-bottom: 8px;
 }
 
-.cont-prinsp-work{
-padding-bottom: 0;
+.section-prinsp-work{
+padding-top: 120px;
+  padding-bottom: 0;
 --indent-items: 4;
 }
 
