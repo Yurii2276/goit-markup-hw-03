@@ -471,13 +471,6 @@ letter-spacing: 0.02em;
   background-color: var(--btn-hover-color);
 }
 
-.cont-portfolio{
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-}
-
 .filtr{
   padding-top: 96px;
   padding-bottom: 120px;
